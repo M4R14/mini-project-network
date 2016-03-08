@@ -1,7 +1,8 @@
 import socket
+import sys
 
-def Main():
-    host = '127.0.0.1'
+def Main(ip):
+    host = ip
     port = 5000
 
     s = socket.socket()
@@ -16,4 +17,4 @@ def Main():
     s.close()
 
 if __name__ == '__main__':
-    Main()
+    Main(sys.argv[1])

@@ -1,11 +1,13 @@
 from socket import *
 
 def Main():
-    host = '127.0.0.1'
+    host = gethostbyname(gethostname())
     port = 5000
 
     s = socket()
     s.bind((host,port))
+
+    print "server start ", host, ":", port
 
     s.listen(1)
     c, addr = s.accept()
